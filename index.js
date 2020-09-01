@@ -1,47 +1,27 @@
-// 1) Find the element that you want to add the event listener on
-// 2) Add the event listener
-// 3) In the body of the callback, write what you want to do.
+const tacoButton = document.querySelector("#taco")
+const ul = document.getElementById("blobs")
+const form = document.getElementById("emoji-form")
 
-
-// element.addEventListener("event_type", function(evt){
-  // What do you want to do here?
+// document.addEventListener("click", (event) => {
+//     event.target.innerText = "🌮"
 // })
 
-// element.addEventListener("event_type", (evt) => {
-  // What do you want to do here?
-// })
-
-
-
-// document.addEventListener("DOMContentLoaded", function(){})
-
-console.log("hello world")
-let tacoButton = document.getElementById('taco')
-let emojiList = document.querySelector("#blobs")
-
-tacoButton.addEventListener("click", function(){
-  let newEmojiLi = document.createElement("li")
-  newEmojiLi.innerText = "🌮"
-  emojiList.append(newEmojiLi)
+tacoButton.addEventListener("click", () => {
+  addEmoji("🌮")
 })
 
+function addEmoji(emoji){
+  const li = document.createElement("li")
+  li.innerText = emoji
+  ul.appendChild(li)
+}
 
-let emojiForm = document.getElementById('emoji-form')
-emojiForm.addEventListener("submit", event => {
-  event.preventDefault();
-
-  let theForm = event.target
-  let theInputElement = theForm["emoji"]
-  let theActualEmoji = theInputElement.value
-
-  let newEmojiLi = document.createElement("li")
-  newEmojiLi.innerText = theActualEmoji
-  emojiList.append(newEmojiLi)
-
-  // event.target.emoji.value
+document.querySelector("li").addEventListener("click", (e) => {
+  e.target.style.backgroundColor = "yellow"
 })
 
-
-// let functionName = () => {
-//
-// }
+form.addEventListener("submit", (e) => {
+  e.preventDefault()
+  addEmoji(e.target.emoji.value)
+  form.reset()
+})
