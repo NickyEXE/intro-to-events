@@ -1,5 +1,3 @@
-
-
 const tacoButton = document.querySelector("#taco")
 const ul = document.getElementById("blobs")
 const emojiForm = document.getElementById("emoji-form")
