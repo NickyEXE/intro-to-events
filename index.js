@@ -1,6 +1,11 @@
+
+
 const tacoButton = document.querySelector("#taco")
 const ul = document.getElementById("blobs")
 const form = document.getElementById("emoji-form")
+
+const initialEmojis = ["🍓", "🍕", "🥔", "😋", "🚽", "💪"]
+initialEmojis.forEach(addEmoji)
 
 // document.addEventListener("click", (event) => {
 //     event.target.innerText = "🌮"
