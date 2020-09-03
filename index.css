@@ -96,3 +96,7 @@ h1 {
     opacity: 1;
   }
 }
+
+#comment-form{
+  font-size: 20px;
+}

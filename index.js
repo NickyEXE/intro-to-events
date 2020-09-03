@@ -2,7 +2,7 @@
 
 const tacoButton = document.querySelector("#taco")
 const ul = document.getElementById("blobs")
-const form = document.getElementById("emoji-form")
+const emojiForm = document.getElementById("emoji-form")
 
 const initialEmojis = ["🍓", "🍕", "🥔", "😋", "🚽", "💪"]
 initialEmojis.forEach(addEmoji)
@@ -25,8 +25,8 @@ document.querySelector("li").addEventListener("click", (e) => {
   e.target.style.backgroundColor = "yellow"
 })
 
-form.addEventListener("submit", (e) => {
+emojiForm.addEventListener("submit", (e) => {
   e.preventDefault()
   addEmoji(e.target.emoji.value)
-  form.reset()
+  emojiForm.reset()
 })
