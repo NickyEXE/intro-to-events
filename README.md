@@ -30,6 +30,6 @@ As a user I want...
 * to hover over any li and have its background color change to pink
 * to alert "YUM" when I click a taco
 * to make my H1 editable when double clicked
-* make the comment form render comments out to the comments list, along with how many times that comment has been clicked (tracking that number with an event listener). Ie: `<li>[NUMBER OF TIMES CLICKED HERE]: [COMMENT HERE]</li>`
+* make the comment form render comments out to the comments list, along with how many times that comment has been clicked (tracking that number with an event listener). ie: `<li>[NUMBER OF TIMES CLICKED HERE]: [COMMENT HERE]</li>`
 
 ### Nicky stole this lecture from Graham Troyer-Joy and Eric Kim
